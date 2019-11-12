@@ -15,7 +15,7 @@ class UF
         q_root = find(q.to_i)
         return if p_root == q_root
 
-        if (@sz[p_root] < @sz[q_root])
+        if @sz[p_root] < @sz[q_root]
             @id[p_root] = q_root
             @sz[q_root] += @sz[p_root]
         else
@@ -29,7 +29,7 @@ class UF
     private
     def find(p)
         route = Array.new
-        until (p == @id[p])
+        until p == @id[p]
             route.push(p)
             p = @id[p] 
         end 

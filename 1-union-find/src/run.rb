@@ -1,4 +1,4 @@
-require './UF'
+require_relative './UF'
 
 def run
   n = gets.to_i
@@ -7,11 +7,11 @@ def run
   uf = UF.new(n)
 
   input = ""
-  until (input[0] == "quit")
+  until input[0] == "quit"
     input = gets.chomp.to_s.split(' ')
     p = input[0]
     q = input[1]
-    next if (uf.connected?(p.to_i, q.to_i))
+    next if uf.connected?(p.to_i, q.to_i)
     uf.union(p, q)
     puts "#{p} #{q}"
   end
