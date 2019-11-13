@@ -22,9 +22,4 @@ class Insertion
   def sorted?(arr)
     arr == arr.sort
   end
-
-  private
-  def exchange!(arr, i, j)
-    arr[i], arr[j] = arr[j], arr[i]
-  end
 end
