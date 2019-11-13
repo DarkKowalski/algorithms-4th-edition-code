@@ -12,7 +12,7 @@ class Selection
   end
 
   def sort(arr)
-    arr_copy = arr
+    arr_copy = arr.clone
     sort!(arr_copy)
     arr_copy
   end
