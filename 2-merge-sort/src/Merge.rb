@@ -22,8 +22,8 @@ class Merge
   def merge_sort!(arr, lo, hi)
     return if hi <= lo
     mid = lo + (hi - lo) / 2
-    arr[lo..mid] = arr[lo..mid].sort!
-    arr[mid + 1..hi] = arr[mid + 1..hi].sort!
+    merge_sort!(arr, lo, mid)
+    merge_sort!(arr, mid + 1, hi)
     merge!(arr, lo, mid, hi)
     arr
   end
