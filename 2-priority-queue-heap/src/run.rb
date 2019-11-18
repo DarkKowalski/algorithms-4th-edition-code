@@ -1,4 +1,4 @@
-require_relative './MaxPQ.rb'
+require_relative './MaxPQ'
 def run
   max_pq = MaxPQ.new
   arr = gets.chomp.split(' ').to_a.map(&:to_i)
